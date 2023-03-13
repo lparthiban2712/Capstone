@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="13.377" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Medicare UI Validation" name="Validate User Registration" time="7.913">
+<system-out><![CDATA[
+Given user click SignUp button..............................................passed
+When user enters basic information and navigates to Billing page............passed
+And user enters address information and navigates to confirmation screen....passed
+And user clicks confirm button..............................................passed
+And user click Login Here button............................................passed
+And user enter username and password and clicks Login button................passed
+Then "Medicare - Home" page should be displayed.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Medicare UI Validation" name="Validate Paracetamol Product Purchase" time="5.306">
+<system-out><![CDATA[
+When users clicks View button for Paracetamol...............................passed
+And user clicks Add to Cart.................................................passed
+And user clicks Checkout....................................................passed
+And user selects saved shippig address......................................passed
+And user enters credit card informartion and click pay......................passed
+Then "Your Order is Confirmed!!" message should be displayed................passed
+]]></system-out>
+</testcase>
+</testsuite>

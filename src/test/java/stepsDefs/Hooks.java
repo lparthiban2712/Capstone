@@ -5,11 +5,15 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageobjects.MedicareLoginPage;
 
@@ -56,6 +60,17 @@ public class Hooks {
 		ml.enterpassword(password);
 		ml.clickloginbutton();
 
+	}
+	
+	@AfterStep
+	public void attachscreenshot(Scenario scenario)
+	{
+		if(scenario.isFailed())
+		{
+			TakesScreenshot screenshot= (TakesScreenshot)driver;
+			byte[] source=screenshot.getScreenshotAs(OutputType.BYTES);
+			scenario.attach(source, "image/png", "errorscreen");
+		}
 	}
 	@After
 	public void teardown()

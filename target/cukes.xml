@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="13.377" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="Medicare UI Validation" name="Validate User Registration" time="7.913">
+<testsuite name="Cucumber" time="14.628" tests="2" skipped="0" failures="1" errors="0">
+<testcase classname="Medicare UI Validation" name="Validate User Registration" time="8.929">
 <system-out><![CDATA[
 Given user click SignUp button..............................................passed
 When user enters basic information and navigates to Billing page............passed
@@ -11,14 +11,26 @@ And user enter username and password and clicks Login button................pass
 Then "Medicare - Home" page should be displayed.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Medicare UI Validation" name="Validate Paracetamol Product Purchase" time="5.306">
+<testcase classname="Medicare UI Validation" name="Validate Paracetamol Product Purchase" time="5.564">
+<failure type="java.lang.AssertionError" message="expected [Your Order is onfirmed!!] but found [Your Order is Confirmed!!]">
+<![CDATA[java.lang.AssertionError: expected [Your Order is onfirmed!!] but found [Your Order is Confirmed!!]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at stepsDefs.PurchaseProduct.message_should_be_displayed(PurchaseProduct.java:68)
+	at ✽."Your Order is onfirmed!!" message should be displayed(file:///C:/Users/admin/eclipse-workspace/CapstoneProject/src/test/java/features/medicare.feature:24)
+]]>
+</failure>
 <system-out><![CDATA[
 When users clicks View button for Paracetamol...............................passed
 And user clicks Add to Cart.................................................passed
 And user clicks Checkout....................................................passed
 And user selects saved shippig address......................................passed
 And user enters credit card informartion and click pay......................passed
-Then "Your Order is Confirmed!!" message should be displayed................passed
+Then "Your Order is onfirmed!!" message should be displayed.................failed
 ]]></system-out>
 </testcase>
 </testsuite>

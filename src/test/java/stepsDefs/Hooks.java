@@ -103,12 +103,16 @@ public class Hooks {
 				break;
 			}
 		}
-		query="Select id from order_item";
+		query="Select id,user_id from order_detail";
 		result=st.executeQuery(query);
 		
 		while(result.next()) 
 		{ 
-			al.add(String.valueOf(result.getString("id")));
+			if(String.valueOf(result.getString("user_id")).equals(id))
+			{
+				al.add(String.valueOf(result.getString("id")));
+			}
+			
 		}
 		System.out.println("list is "+al);
 		for(String orderid:al)

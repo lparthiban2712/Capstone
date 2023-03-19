@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="18.443" tests="3" skipped="0" failures="0" errors="0">
-<testcase classname="Medicare UI Validation" name="Validate User Registration" time="7.958">
+<testsuite name="Cucumber" time="18.098" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Medicare UI Validation" name="Validate User Registration" time="7.826">
 <system-out><![CDATA[
 Given user click SignUp button..............................................passed
 When user enters basic information and navigates to Billing page............passed
@@ -11,7 +11,7 @@ And user enter username and password and clicks Login button................pass
 Then "Medicare - Home" page should be displayed.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Medicare UI Validation" name="Validate Paracetamol Product Purchase" time="5.597">
+<testcase classname="Medicare UI Validation" name="Validate Paracetamol Product Purchase" time="5.487">
 <system-out><![CDATA[
 When users clicks View button for Paracetamol...............................passed
 And user clicks Add to Cart.................................................passed
@@ -21,7 +21,7 @@ And user enters credit card informartion and click pay......................pass
 Then "Your Order is Confirmed!!" message should be displayed................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Medicare UI Validation" name="Add a category and verify in database" time="4.736">
+<testcase classname="Medicare UI Validation" name="Add a category and verify in database" time="4.638">
 <system-out><![CDATA[
 Given user logged in with admin username "vk@gmail.com" and password "admin".passed
 When user click on Manage Product and selects Add New Category..............passed

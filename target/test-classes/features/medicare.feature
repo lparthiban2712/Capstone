@@ -4,13 +4,13 @@ Feature:Medicare UI Validation
 Scenario:Validate User Registration
 Given user click SignUp button
 When user enters basic information and navigates to Billing page
-|Kiki|cat|jh@gmail.com|1112223334|hello123|
+|Kiki|cat|ji@gmail.com|1112223334|hello123|
 And user enters address information and navigates to confirmation screen
 |007|1st cross|CityX|111|StateX|CountryX|
 And user clicks confirm button
 And user click Login Here button
 And user enter username and password and clicks Login button
-|jh@gmail.com|hello123|
+|ji@gmail.com|hello123|
 Then  "Medicare - Home" page should be displayed
 
 @User

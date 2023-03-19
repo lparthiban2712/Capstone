@@ -10,7 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class MedicareProductsPage {
 	WebDriver driver;
 	WebElement ParacetamolView;
+	WebElement ManageProduct;
 	WebDriverWait wait;
+	WebElement AddCategory;
 	public MedicareProductsPage(WebDriver driver)
 	{
 		this.driver=driver;
@@ -26,6 +28,25 @@ public class MedicareProductsPage {
 		
 	}
 	
+	public void clickManageProduct()
+	{
+		wait=new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[normalize-space()='Manage Product']"))));
+		ManageProduct=driver.findElement(By.xpath("//a[normalize-space()='Manage Product']"));
+		JavascriptExecutor executor=(JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", ManageProduct);
+		
+	}
+	
+	public void clickAddCategory()
+	{
+		wait=new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//button[normalize-space()='Add New Category']"))));
+		AddCategory=driver.findElement(By.xpath("//button[normalize-space()='Add New Category']"));
+		JavascriptExecutor executor=(JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", AddCategory);
+		
+	}
 	
 
 }

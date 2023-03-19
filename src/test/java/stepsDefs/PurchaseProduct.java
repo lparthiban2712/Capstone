@@ -19,11 +19,13 @@ import pageobjects.SelectPage;
 
 public class PurchaseProduct {
 	WebDriver driver=Hooks.driver;
+	
     
 	 @When("^users clicks View button for Paracetamol$")
 	    public void users_clicks_view_button_for_paracetamol() throws Throwable {
-		 MedicareProductsPage mp=new MedicareProductsPage(driver);
-		 mp.clickParacetamolview();
+			
+			MedicareProductsPage mp = new MedicareProductsPage(driver);
+			mp.clickParacetamolview();
 	    }
 
 

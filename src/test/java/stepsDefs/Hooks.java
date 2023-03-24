@@ -84,6 +84,7 @@ public class Hooks {
 		}
 	}
 
+	//cleanup the registered user from database
 	@After("@User")
 	public void deleteuser() throws SQLException
 	{
@@ -150,6 +151,7 @@ public class Hooks {
 		}
 	}
 	
+	//cleanup the added category from database
 	@After("@Database")
 	public void clearnewlyaddedcategory() throws SQLException
 	{

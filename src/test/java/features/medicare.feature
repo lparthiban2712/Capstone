@@ -31,4 +31,10 @@ And user provides Category name and description and saves it
 |Mycategory001|MyCategorydesc002|
 Then verify category "Mycategory001" and description "MyCategorydesc002" should be saved to database
 
+@APITesting
+Scenario: Select a Category in the UI and also through API call then verify the products are displayed correctly in the UI results and API JSON response 
+When user selects "Antipyretics" category in the UI
+And user also sends the API call "http://localhost:8080/medicare/json/data/category/1/products?_=1679496302555" to the products list under same category
+Then following products should be displayed in the results of UI and API JSON response
+|Paracetamol|Combiflame|
 
